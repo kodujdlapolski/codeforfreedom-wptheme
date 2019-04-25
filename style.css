@@ -1,0 +1,1418 @@
+/*
+Theme Name: Code for Freedom
+Author: ePF
+Author URI: http://epf.org.pl/
+Description: Design for Code for Freedom event
+Version: 1.0
+Text Domain: codeforfreedom
+*/
+
+/**
+ * 1.0 Reset
+ *
+ * Resetting and rebuilding styles have been helped along thanks to the fine
+ * work of Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+ * along with Nicolas Gallagher and Jonathan Neal
+ * http://necolas.github.com/normalize.css/ and Blueprint
+ * http://www.blueprintcss.org/
+ *
+ * -----------------------------------------------------------------------------
+ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    max-width: 100%;
+}
+
+html {
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+a,
+a:focus,
+a:hover,
+a:active {
+    text-decoration: none;
+    outline: 0;
+}
+
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
+    font-family: monospace, serif;
+    font-size: 15px;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    line-height: 1.6;
+}
+
+pre {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    max-width: 100%;
+    overflow: auto;
+    padding: 12px;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+blockquote,
+q {
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+blockquote {
+    color: #767676;
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.2631578947;
+    margin-bottom: 24px;
+}
+
+blockquote cite,
+blockquote small {
+    color: #2b2b2b;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+blockquote em,
+blockquote i,
+blockquote cite {
+    font-style: normal;
+}
+
+blockquote strong,
+blockquote b {
+    font-weight: 400;
+}
+
+small {
+    font-size: smaller;
+}
+
+big {
+    font-size: 125%;
+}
+
+sup,
+sub {
+    font-size: 75%;
+    height: 0;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    bottom: 1ex;
+}
+
+sub {
+    top: .5ex;
+}
+
+dl {
+    margin-bottom: 24px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 24px;
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+    border: 0;
+    vertical-align: middle;
+}
+
+figure {
+    margin: 0;
+}
+
+legend {
+    white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 100%;
+    margin: 0;
+    max-width: 100%;
+    vertical-align: baseline;
+}
+
+button,
+input {
+    line-height: normal;
+}
+
+input,
+textarea {
+    background-image: -webkit-linear-gradient(hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0)); /* Removing the inner shadow, rounded corners on iOS inputs */
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    padding: 0;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+caption,
+th,
+td {
+    font-weight: normal;
+    text-align: left;
+}
+
+th {
+    border-width: 0 1px 1px 0;
+    font-weight: bold;
+}
+
+td {
+    border-width: 0 1px 1px 0;
+}
+
+del {
+    color: #767676;
+}
+
+hr {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0;
+    height: 1px;
+    margin-bottom: 23px;
+}
+
+/**
+ * 2.0 Constants
+ * -----------------------------------------------------------------------------
+ */
+
+/* Open Sans */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(fonts/OpenSans.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(fonts/OpenSans-Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Open Sans Italic'), local('OpenSans-Italic'), url(fonts/OpenSans-Italic.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(fonts/OpenSans-BoldItalic.woff) format('woff');
+}
+
+/* Big Noodle Titling */
+@font-face {
+    font-family: 'Big Noodle Titling';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Big Noodle Titling'), local('Big_Noodle_Titling'), url(fonts/BigNoodleTitling.ttf) format('woff');
+}
+
+/* Lato Regular & Bold*/
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato'), local('Lato'), url(fonts/Lato-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Lato Bold'), local('Lato-Bold'), url(fonts/Lato-Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Lato Italic'), local('Lato-Italic'), url(fonts/Lato-RegularItalic.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: bold;
+    src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(fonts/Lato-BoldItalic.woff) format('woff');
+}
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* BASIC STRUCTURE */
+header {
+    min-height: 190px;
+}
+
+header h1.site-title a {
+    display: block;
+    margin-top: 30px;
+    float: left;
+}
+
+#primary-navigation {
+    float: right;
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 24px;
+    color: #9d9d9d;
+    margin-top: 126px;;
+}
+
+#primary-navigation ul {
+    list-style: none;
+}
+
+#primary-navigation ul li {
+    float: left;
+    height: 80px;
+    margin-bottom: -20px;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+#primary-navigation ul li a {
+    color: #9d9d9d;
+}
+
+#primary-navigation ul li.current-menu-item {
+    background-color: #e30613;
+}
+
+#primary-navigation ul li.current-menu-item a {
+    color: #ffffff;
+}
+
+.mainBanner {
+    background: url('images/banner.jpg') center center no-repeat;
+    width: 100%;
+    max-width: 1350px;
+    height: 380px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mainBanner .position {
+    position: absolute;
+    bottom: 0;
+}
+
+.mainBanner .position .info {
+    padding: 32px 30px 32px 20px;
+    background-color: rgba(190, 5, 15, .8);
+}
+
+.mainBanner .position .info p {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 54px;
+    line-height: 1em;
+    color: #ffffff;
+}
+
+.mainBanner .position .info p.big {
+    font-size: 74px;
+}
+
+.mainBanner .position .container {
+    float: left;
+}
+
+.mainBanner .position .register {
+    display: block;
+    background-color: #3c3c3b;
+    padding: 22px 30px;
+    clear: left;
+    cursor: pointer;
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.mainBanner .position .register > span {
+    font-family: sans-serif;
+    font-size: 46px;
+    color: #FFFFFF;
+    line-height: 38px;
+    float: right;
+}
+
+#main .frontPost .title,
+#main .registerNow,
+#main .projects,
+#main .mentors,
+#main .jury,
+#main .single-post .title {
+    font-family: 'Big Noodle Titling', sans-serif;
+    font-size: 48px;
+    color: #e30613;
+    margin-top: 42px;
+    margin-bottom: 26px;
+}
+
+#main .single-post ul,
+#main .single-post ol,
+#main .add-new-project ul,
+#main .add-new-project ol {
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+#main .frontPost .title:after,
+#main .single-post .title:after {
+    content: " ";
+    width: 50px;
+    margin-top: 24px;
+    border-bottom: 4px solid #2d1c47;
+    display: block;
+}
+
+#main .frontPost .content,
+#main .registerNow .content,
+#main .mentors .content,
+#main .jury .content,
+#main .projects .content {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 14px;
+    color: #3c3c3b;
+    margin-bottom: 90px;
+}
+
+#main .registerNow,
+#main .projects,
+#main .mentors,
+#main .jury {
+    margin: 0 -800px;
+    padding: 0 800px;
+}
+
+#main .registerNow {
+    background-color: #bb0f1a;
+}
+
+#main .registerNow .title,
+#main .registerNow .content {
+    color: #FFFFFF;
+}
+
+#main .registerNow .title {
+    margin-top: 32px;
+}
+
+#main .registerNow .content {
+    position: relative;
+    margin-bottom: 26px;
+}
+
+#main .registerNow .register {
+    display: block;
+    background-color: #3c3c3b;
+    padding: 22px 30px;
+    cursor: pointer;
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+#main .registerNow .register > span {
+    font-family: sans-serif;
+    font-size: 46px;
+    color: #FFFFFF;
+    line-height: 38px;
+    float: right;
+}
+
+#main .projects {
+    background-color: #f5f5f5;
+}
+
+#main .projects .projectsList {
+    margin-bottom: 95px;
+}
+
+#main .projects .projectsList .project {
+    position: relative;
+    max-width: 190px;
+    height: 285px;
+    padding: 0;
+    cursor: pointer;
+}
+
+#main .projects .projectsList .projectTitle {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(60, 60, 59, .7);
+    width: 100%;
+    height: 90px;
+    display: table;
+}
+
+#main .projects .projectsList .projectTitle > span {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 5%;
+}
+
+#main .projects .projectsList .projectContent {
+    display: none;
+}
+
+#main .projects .projectsList .projectImg {
+    width: 100%;
+    height: 285px;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+#main .projects .projectsList .projectImg > img {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -30%);
+    -webkit-transform: translate(-50%, -30%);
+    transform: translate(-50%, -30%);
+}
+
+#main .projects .projectsList .project.addNew {
+    background-color: #e61e2a;
+}
+
+#main .projects .projectsList .project.addNew .projectTitle {
+    height: 285px;
+    background: none;
+    padding: 20% 20% 30%;
+    vertical-align: baseline;
+}
+
+#main .projects .projectsList .project.addNew .projectTitle > span {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 48px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+#main .projects .projectsList .project.addNew .projectTitle .arrow {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -25px;
+    width: 50px;
+    display: block;
+    color: #FFFFFF;
+}
+
+#main .mentors,
+#main .jury {
+    background-color: #f5f5f5;
+}
+
+#main .mentors .mentorsList,
+#main .jury .juryList {
+    margin-bottom: 95px;
+}
+
+#main .mentors .mentorsList .mentor,
+#main .jury .juryList .member {
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+}
+
+#main .jury .juryList .member {
+    margin-bottom: 35px;
+}
+
+#main .mentors .mentorsList .mentor,
+#main .jury .juryList .member > .juryImg {
+    max-width: 225px;
+    height: 225px;
+}
+
+#main .mentors .mentorsList .mentorTitle,
+#main .jury .juryList .juryTitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(60, 60, 59, .7);
+    height: 70px;
+    display: table;
+    padding: 0 10px;
+}
+
+#main .mentors .mentorsList .mentorTitle {
+    width: 100%;
+}
+
+#main .jury .juryList .juryTitle {
+    width: 225px;
+}
+
+#main .mentors .mentorsList .mentorTitle > span,
+#main .jury .juryList .juryTitle > span {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#main .mentors .mentorsList .mentorContent,
+#main .jury .juryList .juryContent {
+    display: none;
+}
+
+#main .mentors .mentorsList .mentorImg,
+#main .jury .juryList .juryImg {
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+}
+
+#main .mentors .mentorsList .mentorImg img,
+#main .jury .juryList .juryImg img {
+    width: 225px;
+    height: 225px;
+    overflow: hidden;
+}
+
+#main .jury .juryList .juryInformation {
+    left: 250px;
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+    font-family: "Lato", Arial, sans-serif;
+    color: #2f2f2f;
+    font-size: 14px;
+}
+
+#main .mentors .mentorsList .mentor.addNew {
+    background-color: #e61e2a;
+}
+
+#main .mentors .mentorsList .mentor.addNew .mentorTitle {
+    height: 225px;
+    background: none;
+    padding: 20% 8% 30%;
+    vertical-align: baseline;
+}
+
+#main .mentors .mentorsList .mentor.addNew .mentorTitle > span {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 48px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+#main .mentors .mentorsList .mentor.addNew .mentorTitle .arrow {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -25px;
+    width: 50px;
+    display: block;
+    color: #FFFFFF;
+}
+
+#main .mentors .content {
+    font-family: "Lato", Arial, sans-serif;
+    color: #2f2f2f;
+}
+
+#main .mentors .content .mentor {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#main .mentors .content .mentor .mentorImg {
+    margin-bottom: 8px;
+}
+
+#main .mentors .content .mentor .mentorTitle {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#main .mentors .content .mentor .mentorDiaspora,
+#main .mentors .content .mentor .mentorTwitter {
+    font-size: 12px;
+    color: #3460a8;
+}
+
+#main .mentors .content .mentor .mentorContent {
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+#main .organizers {
+    background-color: #ffffff;
+}
+
+#main .organizers .subtitle {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 18px;
+    color: #424242;
+}
+
+#main .organizers .content {
+    margin-bottom: 65px /*90px - (.content > div > margin-bottom)*/;
+}
+
+#main .organizers .content > .row {
+    margin-bottom: 60px;
+}
+
+#main .organizers .content > .row > div {
+    padding-left: 0;
+}
+
+#main .organizers .content > .row > div a {
+    display: block;
+    height: 95px;
+    float: left;
+    position: relative;
+}
+
+#main .organizers .content > .row > div a > img {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+#main .frontPost.news-and-tips ul {
+    list-style: none;
+}
+
+#main .frontPost.news-and-tips ul li,
+#main .single-post .post {
+    font-family: "Lato", Arial, sans-serif;
+    color: #3c3c3b;
+    padding-bottom: 65px;
+}
+
+#main .frontPost.news-and-tips ul li .date,
+#main .single-post .post .date {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+#main .frontPost.news-and-tips ul li .subTitle,
+#main .single-post .post .subTitle {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 26px;
+}
+
+#main .frontPost.news-and-tips ul li .content,
+#main .single-post .post .content {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 15px 0 20px;
+}
+
+#main .single-post .post .content p,
+#main .single-post .post .content span {
+    margin-bottom: 6px;
+    display: inline-block;
+    width: 100%;
+}
+
+#main .frontPost.news-and-tips ul li .readmore,
+#main .single-post .post .goBack {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 24px;
+    color: #e30613;
+    border-bottom: 1px solid #e30613;
+    margin-bottom: 65px;
+}
+
+#main .single-post .post .post-content ul {
+    list-style: square outside none;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+#main .single-post .post .post-content p {
+    margin: 0 0 20px;
+}
+
+#main .single-post .post .post-content b, strong {
+    font-weight: bold;
+}
+
+#main .single-post .post .post-content em {
+    font-style: italic;
+}
+
+#main .single-post .post.projectDetail .post-thumbnail {
+    margin-bottom: 20px;
+}
+
+#main .single-post .post.projectDetail .post-thumbnail > img {
+    max-width: 100%;
+    height: auto;
+}
+
+#main .single-post .post.projectDetail .subTitle {
+    font-size: 36px;
+}
+
+#main .single-post .post.projectDetail .author {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+#main .single-post .post.projectDetail .content-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#main .add-new-project {
+    margin-bottom: 15px;
+}
+
+#main .add-new-project .content p,
+#main .add-new-project .content span {
+    margin-bottom: 6px;
+    display: inline-block;
+    width: 100%;
+}
+
+#main #new_project.congrats,
+#main #new_project.error {
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+#main #new_project.error {
+    color: #e30613;
+}
+
+#main #new_project .rulesBlock {
+    padding-top: 45px;
+    padding-bottom: 30px;
+}
+
+#main #new_project .rulesBlock input[type="checkbox"] {
+    margin-right: 10px;
+    float: left;
+}
+
+#main #new_project label {
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #3c3c3b;
+    margin-bottom: 5px;
+}
+
+#main #new_project label.smallOne {
+    font-weight: normal;
+    float: left;
+    width: 90%;
+    cursor: pointer;
+}
+
+#main #new_project label .require {
+    color: #e61e2a;
+    padding-left: 2px;
+}
+
+#main #new_project input.goodlook {
+    background-color: #fafafa;
+    border-width: 0;
+    border-bottom: 1px solid #e61e2a;
+    height: 30px;
+    margin-bottom: 30px;
+}
+
+#main #new_project .separate {
+    margin-right: 1%;
+}
+
+#main #new_project textarea {
+    background-color: #fafafa;
+    border-width: 0;
+    border-bottom: 1px solid #e61e2a;
+}
+
+#main #new_project .logo {
+    margin-top: -40px;
+}
+
+#main #new_project #submit {
+    background-color: #e61e2a;
+    padding: 20px;
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    height: auto;
+    border-width: 0;
+}
+
+#main #new_project #submit span,
+#main #new_project #submit .arrow {
+    float: left;
+}
+
+#main #new_project #submit .arrow {
+    padding-left: 10px;
+}
+
+#main .main-sidebar {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    background-color: #FFFFFF;
+    margin-top: -95px;
+}
+
+.sidebar .widget_twitter {
+    padding: 14px 15px;
+    border-left: 46px solid #78cdf0;
+    position: relative;
+    font-family: "Lato", Arial, sans-serif;
+}
+
+.sidebar .widget_twitter:before {
+    content: " ";
+    background: url(images/twitter_logo.png) top left no-repeat;
+    width: 26px;
+    height: 21px;
+    position: absolute;
+    top: 20px;
+    left: -35px;
+}
+
+.sidebar .widget_twitter h3 {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 36px;
+    color: #e30613;
+}
+
+.sidebar .widget_twitter .widget_twitter_list {
+    margin-top: 15px;
+    list-style: none;
+}
+
+.sidebar .widget_twitter .widget_twitter_list li {
+    padding-bottom: 30px;
+    display: block;
+}
+
+.sidebar .widget_twitter .widget_twitter_list .tweet-header {
+    width: 100%;
+    display: block;
+    float: left;
+    padding-bottom: 8px;
+}
+
+.sidebar .widget_twitter .widget_twitter_list .tweet-header .user-image > img {
+    border-radius: 4px;
+    float: left;
+    height: 28px;
+    margin: 0 6px 0 0;
+    width: 28px;
+}
+
+.sidebar .widget_twitter .widget_twitter_list .tweet-header .tweet-user {
+    max-width: 56%;
+    float: left;
+}
+
+.sidebar .widget_twitter .widget_twitter_list .tweet-header .tweet-user .name {
+    color: #1e2b2f;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1em;
+    float: left;
+    width: 100%;
+}
+
+.sidebar .widget_twitter .widget_twitter_list .tweet-header .tweet-user .screen-name {
+    color: #717171;
+    font-size: 12px;
+    float: left;
+    width: 100%;
+}
+
+.sidebar .widget_twitter .widget_twitter_list .tweet-header .tweet-date {
+    color: #717171;
+    font-size: 12px;
+    white-space: nowrap;
+    width: 24%;
+    float: right;
+}
+
+.sidebar .widget_twitter .widget_twitter_list .tweet-content {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    word-wrap: break-word;
+}
+
+.sidebar .widget_facebook {
+    background-color: #3460a8;
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 25px 20px 25px 48px;
+}
+
+.sidebar .widget_facebook:before {
+    content: " ";
+    background: url(images/facebook_logo.png) top left no-repeat;
+    width: 10px;
+    height: 17px;
+    position: absolute;
+    top: 28px;
+    left: 16px;
+}
+
+.sidebar .widget_facebook .text {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    color: #ffffff;
+}
+
+.sidebar .widget_facebook .arrow {
+    color: #ffffff;
+    font-size: 46px;
+    font-weight: bold;
+    height: 10px;
+    line-height: 0;
+    margin-top: -5px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+}
+
+.sidebarFront .news-and-tips {
+    background: #e61e2a;
+    padding: 25px 20px;
+}
+
+.sidebarFront .news-and-tips .title {
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.sidebarFront .news-and-tips .tip {
+    border-bottom: 1px solid #FFFFFF;
+    padding: 15px 0;
+    display: block;
+}
+
+.sidebarFront .news-and-tips .tip:last-child {
+    border-bottom-width: 0;
+}
+
+.sidebarFront .news-and-tips .tip .date {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 11px;
+    color: #ffffff;
+}
+
+.sidebarFront .news-and-tips .tip .subtitle {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+footer {
+    background-color: #3c3c3b;
+    padding: 20px 0 60px;
+}
+
+#bottom-navigation {
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+#bottom-navigation ul {
+    list-style: none;
+}
+
+#bottom-navigation ul li {
+    float: left;
+    padding: 0 6px;
+}
+
+#bottom-navigation ul li a {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 12px;
+    color: #9d9d9d;
+}
+
+#bottom-navigation ul li.current-menu-item a {
+    color: #ffffff;
+}
+
+.license > img {
+    width: 40px;
+    margin-left: 6px;
+    margin-bottom: 6px;
+}
+
+.inspired,
+.inspired a {
+    color: #9d9d9d;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 12px;
+}
+
+.inspired {
+    margin: 10px 0 0;
+    text-align: right;
+    padding: 0;
+}
+
+#main .single-post .post .comments-area,
+#main .single-post .post .comment-respond,
+#main .single-post .post .comment-form {
+    float: left;
+    width: 100%;
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 14px;
+    color: #3c3c3b;
+}
+
+#main .single-post .post #comments:before {
+    border-bottom: 4px solid #2d1c47;
+    content: " ";
+    display: block;
+    margin-bottom: 40px;
+    width: 50px;
+}
+
+#main .single-post .post .comment-list {
+    list-style: none;
+}
+
+#main .single-post .post .comment-list > li {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#main .single-post .post .comment-list .comment-body > div {
+    display: none;
+}
+
+#main .single-post .post .comment-list .comment footer {
+    width: 90%;
+    float: left;
+    display: block;
+    background: none;
+    padding: 0;
+    font-size: 12px;
+}
+
+#main .single-post .post .comment-list .comment footer > div {
+    float: left;
+    width: 50%;
+}
+
+#main .single-post .post .comment-list .comment footer .comment-author > img {
+    margin-top: -25px;
+}
+
+#main .single-post .post .comment-list .comment footer .comment-metadata {
+    font-size: 10px;
+    margin-top: 5px;
+    text-align: right;
+}
+
+#main .single-post .post .comment-list .comment footer .comment-metadata .edit-link {
+    display: none;
+}
+
+#main .single-post .post .comment-list .comment-body .comment-content {
+    display: block;
+    float: left;
+    padding-bottom: 10px;
+    width: 90%;
+    border-bottom: 1px solid #e61e2a;
+}
+
+#main .single-post .post .comments-area {
+    margin-top: 20px;
+}
+
+#main .single-post .post .comments-area .comment-respond {
+    margin-top: 20px;
+}
+
+#main .single-post .post .comment-area .comment-respond h3 {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#main .single-post .post .comment-form > p {
+    float: left;
+    width: 100%;
+}
+
+#main .single-post .post .comment-form .comment-notes {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 10px;
+    color: #3c3c3b;
+    margin: 5px 0 10px;
+}
+
+#main .single-post .post .comment-form .comment-notes > span {
+    color: #e61e2a;
+    padding-left: 2px;
+}
+
+#main .single-post .post .comment-form label {
+    color: #3c3c3b;
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    float: left;
+    width: 100%;
+}
+
+#main .single-post .post .comment-form label > span {
+    color: #e61e2a;
+    padding-left: 2px;
+    float: none;
+    width: auto;
+}
+
+#main .single-post .post .comment-form input {
+    background-color: #fafafa;
+    border: 0 solid #e61e2a;
+    border-bottom-width: 1px;
+    height: 30px;
+    margin-bottom: 10px;
+    float: left;
+    width: 90%;
+}
+
+#main .single-post .post .comment-form textarea {
+    float: left;
+    width: 90%;
+    background-color: #fafafa;
+    border: 0 solid #e61e2a;
+    border-bottom-width: 1px;
+}
+
+#main .single-post .post .comment-form .form-allowed-tags {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 12px;
+    margin-top: 15px;
+    width: 90%;
+}
+
+#main .single-post .post .comment-form .form-allowed-tags abbr,
+#main .single-post .post .comment-form .form-allowed-tags code {
+    font-size: 12px;
+}
+
+#main .single-post .post .comment-form .form-submit > input {
+    background-color: #e61e2a;
+    border-width: 0;
+    color: #ffffff;
+    font-family: "Big Noodle Titling", sans-serif;
+    font-size: 24px;
+    height: auto;
+    margin: 20px 0 40px;
+    padding: 20px;
+    width: auto;
+}
+
+@media (max-width: 565px) {
+    .mainBanner {
+        height: auto;
+        background-size: cover;
+    }
+
+    .mainBanner .position {
+        position: relative;
+    }
+}
+
+@media (min-width: 992px) {
+    #main .registerNow .register {
+        position: absolute;
+        bottom: -26px;
+        right: 0;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1010px) {
+    header .site-title a {
+        width: 100%;
+    }
+
+    header #primary-navigation {
+        margin-bottom: 10px;
+        margin-top: 20px;
+        float: left;
+    }
+
+    header #primary-navigation li {
+        margin-bottom: 0;
+        height: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .inspired {
+        padding-right: 54px;
+    }
+}
